@@ -1,5 +1,5 @@
 {
-  "name": "solidity-rounding",
+  "name": "solidity-fixed-point-arithmetic",
   "license": "MIT",
   "repository": {
     "url": "https://github.com/RnkSngh/solidityRounding"
@@ -22,11 +22,11 @@
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
   },
-  "author" : "Raunak Singh raunaksingh2.718@gmail.com",
+  "author": "Raunak Singh raunaksingh2.718@gmail.com",
   "main": "dist/index.js",
   "files": [
     "dist/"
   ],
   "types": "dist/index.d.ts",
-  "version": "1.0.0"
+  "version": "1.0.1"
 }
