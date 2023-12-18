@@ -1,5 +1,5 @@
-import { BigNumber, BigNumberish } from "ethers";
 import { parseUnits } from "ethers/lib/utils";
+import { BigNumber } from "@ethersproject/bignumber";
 
 /**
  * Returns the larger of two given BigNumbers

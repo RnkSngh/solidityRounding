@@ -5,15 +5,15 @@ import { parseEther, parseUnits } from "ethers/lib/utils";
 import { decimalDivBN, decimalMulBN } from "../src/";
 chai.use(solidity);
 
-const ONE_18 = parseEther("1") as BigNumber; // 1 in 18 decimals
-const THREE_18 = ONE_18.mul(3) as BigNumber; // 3 in 18 decimals
-const ONE_THIRD_18 = ONE_18.div(3) as BigNumber; // 1/3 in 18 decimals
-const ONE_SIXTH_18 = ONE_18.div(6) as BigNumber; //  1/6 in 18 decimals
+const ONE_18 = parseEther("1"); // 1 in 18 decimals
+const THREE_18 = ONE_18.mul(3); // 3 in 18 decimals
+const ONE_THIRD_18 = ONE_18.div(3); // 1/3 in 18 decimals
+const ONE_SIXTH_18 = ONE_18.div(6); //  1/6 in 18 decimals
 
-const ONE_6 = parseUnits("1", 6) as BigNumber; // 1 in 6 decimals
-const THREE_6 = ONE_6.mul(3) as BigNumber; // 3 in 6 decimals
-const ONE_THIRD_6 = ONE_6.div(3) as BigNumber; //  1/3 in 6 decimals
-const ONE_SIXTH_6 = ONE_6.div(6) as BigNumber; //  1/6 in 6 decimals
+const ONE_6 = parseUnits("1", 6); // 1 in 6 decimals
+const THREE_6 = ONE_6.mul(3); // 3 in 6 decimals
+const ONE_THIRD_6 = ONE_6.div(3); //  1/3 in 6 decimals
+const ONE_SIXTH_6 = ONE_6.div(6); //  1/6 in 6 decimals
 
 describe("Test BigNumber decimal multiplication ", () => {
   describe("Should be able to multiply 6 decimal * 6 decimals and output to 18 decimals ", () => {

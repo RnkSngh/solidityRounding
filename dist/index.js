@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.absDifference = exports.convertDecimals = exports.decimalDivBN = exports.decimalMulBN = exports.minBN = exports.maxBN = void 0;
 const utils_1 = require("ethers/lib/utils");
+const bignumber_1 = require("@ethersproject/bignumber");
 /**
  * Returns the larger of two given BigNumbers
  * @param A BigNumber to compare
@@ -38,7 +39,7 @@ function decimalMulBN(A, B, aDecimals = 18, bDecimals = 18, outDecimals = 18) {
         const roundingPadding = (0, utils_1.parseUnits)(".5", aDecimals + bDecimals - outDecimals);
         unformattedProduct = unformattedProduct.add(roundingPadding); // Add rounding padding to result before dividing to round up if last accurate digit >= 5
     }
-    return (0, exports.convertDecimals)(unformattedProduct, aDecimals + bDecimals, outDecimals);
+    return bignumber_1.BigNumber.from((0, exports.convertDecimals)(unformattedProduct, aDecimals + bDecimals, outDecimals));
 }
 exports.decimalMulBN = decimalMulBN;
 /**

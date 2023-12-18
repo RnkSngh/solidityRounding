@@ -1,4 +1,4 @@
-import { BigNumber } from "ethers";
+import { BigNumber } from "@ethersproject/bignumber";
 /**
  * Returns the larger of two given BigNumbers
  * @param A BigNumber to compare
